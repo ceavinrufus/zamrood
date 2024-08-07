@@ -3,7 +3,7 @@
 import { fetchArticles } from "@/server/actions";
 import { useQuery } from "@tanstack/react-query";
 
-export default function Products() {
+export default function Articles() {
   const { data, error, isFetched } = useQuery({
     queryKey: ["articles"],
     queryFn: fetchArticles,
