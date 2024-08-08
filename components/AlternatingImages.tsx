@@ -32,7 +32,7 @@ const AlternatingImages = (props: AlternatingImageProps) => {
         <Image
           key={index}
           src={gallery.src}
-          alt={gallery.gallery_alt_text}
+          alt={gallery.gallery_alt_text || "gallery"}
           fill
           loading="lazy"
           className={`absolute size-full inset-0 object-cover object-center transition-opacity ease-in-out duration-300 ${
