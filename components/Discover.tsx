@@ -14,8 +14,8 @@ const Discover = () => {
           fill
           loading="lazy"
           className="object-contain object-center"
-          alt="Discover Tailored Experiences"
-          sizes="100vw"
+          alt="discover"
+          sizes="100%"
         />
       </div>
       <div className="lg:w-1/2 flex flex-col lg:justify-center space-y-2 text-center lg:text-left">

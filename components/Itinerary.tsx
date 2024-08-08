@@ -11,6 +11,7 @@ export interface ProductProps {
 const Itinerary = (props: ProductProps) => {
   const { itinerary } = props;
 
+  // Untuk convert harga ke format IDR
   const formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "IDR",
@@ -21,7 +22,9 @@ const Itinerary = (props: ProductProps) => {
 
   return (
     <div className="py-4 lg:py-[72px] w-full flex flex-col lg:odd:flex-row lg:flex-row-reverse gap-4 lg:gap-6 items-stretch">
-      <AlternatingImages images={itinerary.related_galleries.slice(0, 2)} />
+      <div className="relative lg:w-1/2 max-h-[256px] lg:max-h-[327px] aspect-video">
+        <AlternatingImages images={itinerary.related_galleries.slice(0, 2)} />
+      </div>
       <div className="lg:w-1/2 flex flex-col justify-between space-y-2 lg:space-y-4 text-center lg:text-left">
         {/* Primary Info */}
         <div className="w-full flex flex-col space-y-2">

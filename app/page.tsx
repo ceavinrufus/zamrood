@@ -1,6 +1,7 @@
 import BeyondPremium from "@/components/BeyondPremium";
 import Destinations from "@/components/Destinations";
 import Discover from "@/components/Discover";
+import Footages from "@/components/Footages";
 import Hero from "@/components/Hero";
 import { fetchProducts, fetchArticles } from "@/server/actions";
 import {
@@ -38,13 +39,11 @@ export default async function Home() {
             height={97}
             loading="lazy"
             className="object-contain object-center w-full"
-            alt="Discover Tailored Experiences"
-            sizes="100vw"
+            alt="Separator"
           />
         </section>
         <Destinations />
-        {/* <Products />
-        <Articles /> */}
+        <Footages />
       </HydrationBoundary>
     </main>
   );

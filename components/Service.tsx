@@ -12,8 +12,8 @@ const Service = (props: ServiceProps) => {
     <div className="flex h-full flex-col justify-start items-stretch text-center">
       <Image
         className="mx-auto lg:p-[14px]"
-        alt="service-1"
         src={props.icon}
+        alt={props.title}
         width={128}
         height={128}
       />

@@ -27,9 +27,10 @@ const AlternatingImages = (props: AlternatingImageProps) => {
   }, [props.images.length]);
 
   return (
-    <div className="relative lg:w-1/2 max-h-[256px] lg:max-h-[327px] aspect-video">
+    <>
       {props.images.map((gallery: Gallery, index: number) => (
         <Image
+          key={index}
           src={gallery.src}
           alt={gallery.gallery_alt_text}
           fill
@@ -40,10 +41,10 @@ const AlternatingImages = (props: AlternatingImageProps) => {
           style={{
             color: "transparent",
           }}
-          sizes="100vw"
+          sizes="100%"
         />
       ))}
-    </div>
+    </>
   );
 };
 
