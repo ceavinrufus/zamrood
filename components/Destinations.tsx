@@ -23,6 +23,19 @@ const Destinations = () => {
         </div>
       </div>
       <Products />
+      <div className="w-full max-w-7xl mx-auto ">
+        <div className="w-full inline-flex justify-center lg:justify-end">
+          <Link
+            className="group w-fit inline-flex gap-4 items-center cursor-pointer"
+            href="#destinations"
+          >
+            <ChevronRightIcon className="stroke-dark-teal group-hover:stroke-tan transition-colors ease-in-out duration-300" />
+            <span className="uppercase text-base text-dark-teal font-bold group-hover:text-tan transition-colors ease-in-out duration-300">
+              Explore more
+            </span>
+          </Link>
+        </div>
+      </div>
     </section>
   );
 };
