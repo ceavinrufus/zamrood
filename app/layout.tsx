@@ -34,7 +34,14 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning lang="en">
-      <body className={cn(unbounded.variable, albert.className, signature.variable)}>
+      <body
+        className={cn(
+          unbounded.variable,
+          albert.className,
+          signature.variable,
+          "bg-cream"
+        )}
+      >
         <Navbar />
         <Provider>{children}</Provider>
       </body>

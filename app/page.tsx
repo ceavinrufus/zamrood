@@ -1,4 +1,5 @@
 import Articles from "@/components/Articles";
+import BeyondPremium from "@/components/BeyondPremium";
 import Hero from "@/components/Hero";
 import Products from "@/components/Products";
 import { fetchProducts, fetchArticles } from "@/server/actions";
@@ -27,6 +28,7 @@ export default async function Home() {
     <main className="font-albert-sans bg-cream text-black">
       <HydrationBoundary state={dehydrate(queryClient)}>
         <Hero />
+        <BeyondPremium />
         {/* <Products />
         <Articles /> */}
       </HydrationBoundary>
