@@ -1,4 +1,5 @@
 import Articles from "@/components/Articles";
+import Hero from "@/components/Hero";
 import Products from "@/components/Products";
 import { fetchProducts, fetchArticles } from "@/server/actions";
 import {
@@ -23,8 +24,9 @@ export default async function Home() {
   });
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
+    <main className="font-albert-sans bg-cream text-black">
       <HydrationBoundary state={dehydrate(queryClient)}>
+        <Hero />
         {/* <Products />
         <Articles /> */}
       </HydrationBoundary>

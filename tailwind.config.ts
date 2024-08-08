@@ -2,6 +2,7 @@ import type { Config } from "tailwindcss";
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 const config: Config = {
   content: [
@@ -12,15 +13,23 @@ const config: Config = {
   // darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        unbounded: ["var(--font-unbounded)", ...defaultTheme.fontFamily.sans],
+        "the-signature": [
+          "var(--font-the-signature)",
+          ...defaultTheme.fontFamily.sans,
+        ],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        "vista-white": "rgb(250, 249, 245, 1)",
-        "dark-teal": "rgb(0, 64, 64, 1)",
-        "dark-aquaman": "rgb(11, 115, 115, 1)",
+        cream: "#FAF9F5",
+        "dark-teal": "#004040",
+        "dark-aqua": "#0B7373",
+        tan: "#D1B775",
       },
     },
   },
