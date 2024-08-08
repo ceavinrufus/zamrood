@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import AlternatingImages from "./AlternatingImages";
 
 export interface ProductProps {
   itinerary: {
@@ -20,21 +21,7 @@ const Itinerary = (props: ProductProps) => {
 
   return (
     <div className="py-4 lg:py-[72px] w-full flex flex-col lg:odd:flex-row lg:flex-row-reverse gap-4 lg:gap-6 items-stretch">
-      <div className="relative lg:w-1/2 max-h-[256px] lg:max-h-[327px] aspect-video">
-        {itinerary.related_galleries.slice(0, 2).map((gallery: any) => (
-          <Image
-            src={gallery.src}
-            alt={gallery.gallery_alt_text}
-            fill
-            loading="lazy"
-            className="absolute size-full inset-0 object-cover object-center transition-opacity ease-in-out duration-300"
-            style={{
-              color: "transparent",
-            }}
-            sizes="100vw"
-          />
-        ))}
-      </div>
+      <AlternatingImages images={itinerary.related_galleries.slice(0, 2)} />
       <div className="lg:w-1/2 flex flex-col justify-between space-y-2 lg:space-y-4 text-center lg:text-left">
         {/* Primary Info */}
         <div className="w-full flex flex-col space-y-2">
