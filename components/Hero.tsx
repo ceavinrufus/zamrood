@@ -4,7 +4,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="relative flex place-items-center px-4 h-[756px] lg:h-[810px]">
+    <section className="relative flex place-items-center px-4 h-[858px] lg:h-[912px]">
       <Image
         src="/images/hero-image.png"
         priority

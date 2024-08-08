@@ -23,7 +23,7 @@ const NavLink = ({ text, href, isActive }: NavLinkProps) => {
 
 const Navbar = () => {
   return (
-    <nav className="sticky top-0 z-40 bg-cream w-full inline-flex justify-center">
+    <nav className="fixed top-0 z-40 bg-transparent w-full inline-flex justify-center">
       <div className="p-4 w-full max-w-7xl mx-auto inline-flex justify-between items-center">
         <Link href="/">
           <Image
