@@ -11,7 +11,7 @@ const Discover = () => {
       <div className="relative w-full lg:w-1/2 max-h-[188px] lg:max-h-64 aspect-square">
         <Image
           src={"/images/discover.png"}
-          layout="fill"
+          fill
           loading="lazy"
           className="object-contain object-center"
           alt="Discover Tailored Experiences"

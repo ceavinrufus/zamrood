@@ -12,7 +12,7 @@ const Hero = () => {
           color: "transparent",
         }}
         alt="hero image"
-        layout="fill"
+        fill
         className="absolute size-full inset-0 object-cover object-center"
         sizes="100"
       />

@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { ReactComponent as ChevronRightIcon } from "@/public/icons/chevron-right.svg";
+import Products from "./Products";
 
 const Destinations = () => {
   return (
@@ -22,6 +22,7 @@ const Destinations = () => {
           </Link>
         </div>
       </div>
+      <Products />
     </section>
   );
 };

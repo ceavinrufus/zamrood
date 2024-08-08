@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Unbounded, Albert_Sans } from "next/font/google";
 import "./globals.css";
-import Provider from "@/utils/Provider";
+import TanstackProvider from "@/providers/TanstackProvider";
 import Navbar from "@/components/Navbar";
 import { cn } from "@/lib/utils";
 import localFont from "next/font/local";
@@ -43,7 +43,7 @@ export default function RootLayout({
         )}
       >
         <Navbar />
-        <Provider>{children}</Provider>
+        <TanstackProvider>{children}</TanstackProvider>
       </body>
     </html>
   );

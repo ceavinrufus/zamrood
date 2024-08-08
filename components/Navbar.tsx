@@ -13,6 +13,10 @@ interface NavLinkProps {
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
+  useEffect(() => {
+    setScrolled(window.scrollY > 0);
+  }, []);
+
   const NavLink = ({ text, href, isActive }: NavLinkProps) => {
     return (
       <Link
@@ -35,7 +39,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 0);
+      setScrolled(window.scrollY > 80);
     };
 
     window.addEventListener("scroll", handleScroll);

@@ -1,9 +1,7 @@
-import Articles from "@/components/Articles";
 import BeyondPremium from "@/components/BeyondPremium";
 import Destinations from "@/components/Destinations";
 import Discover from "@/components/Discover";
 import Hero from "@/components/Hero";
-import Products from "@/components/Products";
 import { fetchProducts, fetchArticles } from "@/server/actions";
 import {
   dehydrate,
