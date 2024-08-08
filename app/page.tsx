@@ -1,5 +1,6 @@
 import Articles from "@/components/Articles";
 import BeyondPremium from "@/components/BeyondPremium";
+import Destinations from "@/components/Destinations";
 import Discover from "@/components/Discover";
 import Hero from "@/components/Hero";
 import Products from "@/components/Products";
@@ -43,6 +44,7 @@ export default async function Home() {
             sizes="100vw"
           />
         </section>
+        <Destinations />
         {/* <Products />
         <Articles /> */}
       </HydrationBoundary>
