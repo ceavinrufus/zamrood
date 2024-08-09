@@ -1,3 +1,4 @@
+import Articles from "@/components/Articles";
 import BeyondPremium from "@/components/BeyondPremium";
 import Destinations from "@/components/Destinations";
 import Discover from "@/components/Discover";
@@ -46,6 +47,7 @@ export default async function Home() {
         <Destinations />
         <Footages />
         <PandooinCTA />
+        <Articles />
       </HydrationBoundary>
     </main>
   );

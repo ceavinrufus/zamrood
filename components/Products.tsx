@@ -10,7 +10,8 @@ export default function Products() {
     queryFn: fetchProducts,
   });
 
-  if (!data.data) return;
+  if (!isFetched) return;
+
   return (
     <>
       {data.data.map((product: ProductProps, index: number) => (

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { ReactComponent as ArrowUpRight } from "@/public/icons/arrow-up-right.svg";
+
 const PandooinCTA = () => {
   return (
     <section
