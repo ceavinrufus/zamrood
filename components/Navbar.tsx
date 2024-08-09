@@ -3,12 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-
-interface NavLinkProps {
-  text: string;
-  href: string;
-  isActive: boolean;
-}
+import MobileSidebar from "./MobileSidebar";
+import NavLink from "./NavLink";
+import { navLinks } from "@/constants/navLinks";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -16,26 +13,6 @@ const Navbar = () => {
   useEffect(() => {
     setScrolled(window.scrollY > 0);
   }, []);
-
-  const NavLink = ({ text, href, isActive }: NavLinkProps) => {
-    return (
-      <Link
-        className={`px-6 py-2.5 ${
-          !scrolled ? "text-cream" : "text-dark-aqua"
-        } text-base font-bold ${
-          !scrolled ? "border-b-cream" : "border-b-dark-teal"
-        } hover:border-b-[2px] ${
-          isActive &&
-          `${
-            !scrolled ? "border-b-cream" : "border-b-dark-teal"
-          } border-b-[2px]`
-        }`}
-        href={href}
-      >
-        {text}
-      </Link>
-    );
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,12 +42,17 @@ const Navbar = () => {
           />
         </Link>
         <div className="inline-flex items-center gap-6">
+          <MobileSidebar scrolled={scrolled} />
           <div className="hidden lg:inline-flex items-center gap-6">
-            <NavLink text="Homepage" href="/" isActive={true} />
-            <NavLink text="Customize Your Trip" href="/" isActive={false} />
-            <NavLink text="Destination" href="/" isActive={false} />
-            <NavLink text="Article" href="/" isActive={false} />
-
+            {navLinks.map((navLink) => (
+              <NavLink
+                scrolled={scrolled}
+                text={navLink.text}
+                href={navLink.href}
+                isActive={navLink.text === "Homepage"}
+                borderWhenHover={true}
+              />
+            ))}
             <Link
               href={
                 "https://wa.me/6283831556160?text=Hi,%20I%20wanna%20ask%20question%20about%20Zamrood"
