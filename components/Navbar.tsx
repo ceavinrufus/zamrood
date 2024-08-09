@@ -9,10 +9,12 @@ import { navLinks } from "@/constants/navLinks";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [hash, setHash] = useState(window ? window.location.hash : "");
+  const [hash, setHash] = useState(
+    typeof window !== "undefined" ? window.location.hash : ""
+  );
 
   useEffect(() => {
-    setScrolled(window.scrollY > 0);
+    setScrolled(window.scrollY > 80);
   }, []);
 
   useEffect(() => {
