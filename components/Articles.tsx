@@ -2,7 +2,10 @@ import { ArticleGrid } from "./ArticleGrid";
 
 export default function Articles() {
   return (
-    <section className="px-4 lg:py-[72px] w-full max-w-7xl mx-auto flex flex-col space-y-6">
+    <section
+      id="article"
+      className="px-4 lg:py-[72px] w-full max-w-7xl mx-auto flex flex-col space-y-6"
+    >
       <div className="flex flex-col space-y-2">
         <h1 className="font-unbounded text-[22px] lg:text-4xl font-bold text-dark-aqua">
           Articles

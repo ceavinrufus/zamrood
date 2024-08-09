@@ -1,7 +1,7 @@
 export const navLinks = [
   {
     text: "Homepage",
-    href: "/",
+    href: "#",
   },
   {
     text: "Customize Your Trip",

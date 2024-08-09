@@ -9,6 +9,7 @@ import { navLinks } from "@/constants/navLinks";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [hash, setHash] = useState(window ? window.location.hash : "");
 
   useEffect(() => {
     setScrolled(window.scrollY > 0);
@@ -45,13 +46,17 @@ const Navbar = () => {
           <MobileSidebar scrolled={scrolled} />
           <div className="hidden lg:inline-flex items-center gap-6">
             {navLinks.map((navLink) => (
-              <NavLink
-                scrolled={scrolled}
-                text={navLink.text}
-                href={navLink.href}
-                isActive={navLink.text === "Homepage"}
-                borderWhenHover={true}
-              />
+              <button onClick={() => setHash(navLink.href)}>
+                <NavLink
+                  scrolled={scrolled}
+                  text={navLink.text}
+                  href={navLink.href}
+                  isActive={
+                    navLink.href.replace("#", "") === hash.replace("#", "")
+                  }
+                  borderWhenHover={true}
+                />
+              </button>
             ))}
             <Link
               href={
