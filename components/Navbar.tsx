@@ -3,39 +3,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-
-interface NavLinkProps {
-  text: string;
-  href: string;
-  isActive: boolean;
-}
+import MobileSidebar from "./MobileSidebar";
+import NavLink from "./NavLink";
+import { navLinks } from "@/constants/navLinks";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [hash, setHash] = useState(
+    typeof window !== "undefined" ? window.location.hash : ""
+  );
 
   useEffect(() => {
-    setScrolled(window.scrollY > 0);
+    setScrolled(window.scrollY > 80);
   }, []);
-
-  const NavLink = ({ text, href, isActive }: NavLinkProps) => {
-    return (
-      <Link
-        className={`px-6 py-2.5 ${
-          !scrolled ? "text-cream" : "text-dark-aqua"
-        } text-base font-bold ${
-          !scrolled ? "border-b-cream" : "border-b-dark-teal"
-        } hover:border-b-[2px] ${
-          isActive &&
-          `${
-            !scrolled ? "border-b-cream" : "border-b-dark-teal"
-          } border-b-[2px]`
-        }`}
-        href={href}
-      >
-        {text}
-      </Link>
-    );
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,12 +45,26 @@ const Navbar = () => {
           />
         </Link>
         <div className="inline-flex items-center gap-6">
+          <MobileSidebar scrolled={scrolled} />
           <div className="hidden lg:inline-flex items-center gap-6">
-            <NavLink text="Homepage" href="/" isActive={true} />
-            <NavLink text="Customize Your Trip" href="/" isActive={false} />
-            <NavLink text="Destination" href="/" isActive={false} />
-            <NavLink text="Article" href="/" isActive={false} />
-
+            {navLinks.map((navLink, index: number) => (
+              <button
+                key={index}
+                type="button"
+                title={navLink.text}
+                onClick={() => setHash(navLink.href)}
+              >
+                <NavLink
+                  scrolled={scrolled}
+                  text={navLink.text}
+                  href={navLink.href}
+                  isActive={
+                    navLink.href.replace("#", "") === hash.replace("#", "")
+                  }
+                  borderWhenHover={true}
+                />
+              </button>
+            ))}
             <Link
               href={
                 "https://wa.me/6283831556160?text=Hi,%20I%20wanna%20ask%20question%20about%20Zamrood"
@@ -78,6 +72,7 @@ const Navbar = () => {
               target="_blank"
             >
               <button
+                type="button"
                 className={`text-center inline-flex justify-center items-center px-6 py-2.5 rounded-full capitalize font-bold text-sm lg:text-base transition-colors ease-in-out duration-300 bg-transparent ${
                   !scrolled
                     ? "border-cream text-cream hover:bg-cream hover:text-dark-teal hover:border-cream"
