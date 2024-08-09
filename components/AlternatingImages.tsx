@@ -3,9 +3,9 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
-interface Gallery {
+export interface Gallery {
   src: string;
-  gallery_alt_text: string;
+  alt: string;
 }
 
 interface AlternatingImageProps {
@@ -32,7 +32,7 @@ const AlternatingImages = (props: AlternatingImageProps) => {
         <Image
           key={index}
           src={gallery.src}
-          alt={gallery.gallery_alt_text || "gallery"}
+          alt={gallery.alt || "gallery"}
           fill
           loading="lazy"
           className={`absolute size-full inset-0 object-cover object-center transition-opacity ease-in-out duration-300 ${

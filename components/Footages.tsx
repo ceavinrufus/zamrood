@@ -5,27 +5,27 @@ import Image from "next/image";
 const footages = [
   {
     src: "/images/footages/footage-1.png",
-    gallery_alt_text: "Footage 1",
+    alt: "Footage 1",
   },
   {
     src: "/images/footages/footage-2.png",
-    gallery_alt_text: "Footage 2",
+    alt: "Footage 2",
   },
   {
     src: "/images/footages/footage-3.png",
-    gallery_alt_text: "Footage 3",
+    alt: "Footage 3",
   },
   {
     src: "/images/footages/footage-4.png",
-    gallery_alt_text: "Footage 4",
+    alt: "Footage 4",
   },
   {
     src: "/images/footages/footage-5.png",
-    gallery_alt_text: "Footage 5",
+    alt: "Footage 5",
   },
   {
     src: "/images/footages/footage-6.png",
-    gallery_alt_text: "Footage 6",
+    alt: "Footage 6",
   },
 ];
 
@@ -48,7 +48,7 @@ const Footages = () => {
               >
                 <Image
                   src={footage.src}
-                  alt={footage.gallery_alt_text || "footage"}
+                  alt={footage.alt || "footage"}
                   loading="lazy"
                   fill
                   className="absolute size-full inset-0 first-letter:object-cover object-center"

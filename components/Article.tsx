@@ -9,9 +9,8 @@ export const Article = ({
   header,
 }: {
   className?: string;
-  title?: string | React.ReactNode;
-  slug?: string | React.ReactNode;
-  summary?: string | React.ReactNode;
+  title?: string;
+  slug?: string;
   header?: React.ReactNode;
 }) => {
   return (
