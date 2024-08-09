@@ -23,7 +23,7 @@ export const Article = ({
     >
       {header}
       <div className="w-full p-6 lg:p-4 bg-dark-aqua">
-        <h2 className="m-0 text-vista-white text-base font-bold line-clamp-2 text-cream">
+        <h2 className="m-0 text-cream text-base font-bold line-clamp-2">
           {title}
         </h2>
       </div>

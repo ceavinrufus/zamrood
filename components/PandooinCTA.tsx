@@ -17,13 +17,13 @@ const PandooinCTA = () => {
         }}
       >
         <Image src="/logo-white.svg" width={145.71} height={54} alt="logo" />
-        <div className="flex flex-col space-y-1 justify-center lg:justify-end text-right text-cream">
-          <p className="text-vista-white text-base text-center lg:text-right">
+        <div className="flex flex-col space-y-1 justify-center lg:justify-end text-right">
+          <p className="text-cream text-base text-center lg:text-right">
             Want to see other destinations? Check us out at our website
           </p>
           <Link
             target="_blank"
-            className="text-vista-white inline-flex items-center justify-center lg:justify-end gap-2"
+            className="text-cream inline-flex items-center justify-center lg:justify-end gap-2"
             href="https://pandooin.com"
           >
             <span className="text-xl font-bold underline">Pandooin.com</span>

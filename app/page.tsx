@@ -3,6 +3,7 @@ import BeyondPremium from "@/components/BeyondPremium";
 import Destinations from "@/components/Destinations";
 import Discover from "@/components/Discover";
 import Footages from "@/components/Footages";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import PandooinCTA from "@/components/PandooinCTA";
 import { fetchProducts, fetchArticles } from "@/server/actions";
@@ -48,6 +49,7 @@ export default async function Home() {
         <Footages />
         <PandooinCTA />
         <Articles />
+        <Footer />
       </HydrationBoundary>
     </main>
   );
