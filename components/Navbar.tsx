@@ -48,7 +48,11 @@ const Navbar = () => {
           <MobileSidebar scrolled={scrolled} />
           <div className="hidden lg:inline-flex items-center gap-6">
             {navLinks.map((navLink) => (
-              <button onClick={() => setHash(navLink.href)}>
+              <button
+                type="button"
+                title={navLink.text}
+                onClick={() => setHash(navLink.href)}
+              >
                 <NavLink
                   scrolled={scrolled}
                   text={navLink.text}
@@ -67,6 +71,7 @@ const Navbar = () => {
               target="_blank"
             >
               <button
+                type="button"
                 className={`text-center inline-flex justify-center items-center px-6 py-2.5 rounded-full capitalize font-bold text-sm lg:text-base transition-colors ease-in-out duration-300 bg-transparent ${
                   !scrolled
                     ? "border-cream text-cream hover:bg-cream hover:text-dark-teal hover:border-cream"
