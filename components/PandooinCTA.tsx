@@ -13,7 +13,7 @@ const PandooinCTA = () => {
         className="w-full p-6 flex flex-col lg:flex-row space-y-2 justify-between items-center bg-[lightgray] bg-no-repeat bg-center bg-cover"
         style={{
           backgroundImage:
-            "linear-gradient(0deg, rgba(0, 0, 0, 0.36) 0%, rgba(0, 0, 0, 0.36) 100%), url('/images/cta-background.png')",
+            "linear-gradient(0deg, rgba(0, 0, 0, 0.36) 0%, rgba(0, 0, 0, 0.36) 100%), url('/images/cta-background.webp')",
         }}
       >
         <Image src="/logo-white.svg" width={145.71} height={54} alt="logo" />
