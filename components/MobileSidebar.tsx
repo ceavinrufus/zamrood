@@ -10,13 +10,14 @@ import NavLink from "./NavLink";
 const MobileSidebar = ({ scrolled }: { scrolled: boolean }) => {
   return (
     <Sheet>
-      <SheetTrigger className="lg:hidden">
+      <SheetTrigger title="Open Menu" className="lg:hidden">
         {scrolled ? <Hamburger /> : <HamburgerWhite />}
       </SheetTrigger>
       <SheetContent>
         <div className="mt-[156px] flex flex-col space-y-6 text-right">
-          {navLinks.map((navLink) => (
+          {navLinks.map((navLink, index: number) => (
             <NavLink
+              key={index}
               scrolled={true}
               text={navLink.text}
               href={navLink.href}

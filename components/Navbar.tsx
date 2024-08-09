@@ -47,8 +47,9 @@ const Navbar = () => {
         <div className="inline-flex items-center gap-6">
           <MobileSidebar scrolled={scrolled} />
           <div className="hidden lg:inline-flex items-center gap-6">
-            {navLinks.map((navLink) => (
+            {navLinks.map((navLink, index: number) => (
               <button
+                key={index}
                 type="button"
                 title={navLink.text}
                 onClick={() => setHash(navLink.href)}
