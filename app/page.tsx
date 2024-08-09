@@ -3,6 +3,7 @@ import Destinations from "@/components/Destinations";
 import Discover from "@/components/Discover";
 import Footages from "@/components/Footages";
 import Hero from "@/components/Hero";
+import PandooinCTA from "@/components/PandooinCTA";
 import { fetchProducts, fetchArticles } from "@/server/actions";
 import {
   dehydrate,
@@ -44,6 +45,7 @@ export default async function Home() {
         </section>
         <Destinations />
         <Footages />
+        <PandooinCTA />
       </HydrationBoundary>
     </main>
   );
